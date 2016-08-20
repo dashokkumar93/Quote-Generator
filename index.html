@@ -2,16 +2,25 @@
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Cairo|Slabo+27px" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
-  <link href="../Git/styles/styles.css" type="text/css" rel="stylesheet"/>
-  <script src="../Git/script/script.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
+  <link href="styles/styles.css" type="text/css" rel="stylesheet"/>
+  <script src="script/script.js" type="text/javascript"></script>
 </head>
 <body>
 </body>
-<script>
+<script type="text/javascript">
+var responseQuote;
+function parseQuote(resolvee)
+{
+  responseQuote=resolvee;
+}
 $(document).ready(function()
 {
-main_Function.init();
+main_Function.init(responseQuote);
 });
-</script>
+
+
+	</script>
+  <script type="text/javascript" src="http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=parseQuote"></script>
+
 </html>
