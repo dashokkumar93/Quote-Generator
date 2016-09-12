@@ -10,7 +10,7 @@
 </body>
 <script type="text/javascript">
 var responseQuote;
-$.getJSON('http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?', function(data) {
+$.getJSON('"https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en', function(data) {
  responseQuote=data;       
 }); 
 $(document).ready(function()
