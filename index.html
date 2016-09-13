@@ -11,11 +11,8 @@
 <script type="text/javascript">
 var responseQuote;
 $.getJSON('"https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en', function(data) {
- responseQuote=data;       
+ main_Function.init(data);
 }); 
-$(document).ready(function()
-{
-main_Function.init(responseQuote);
-});
+
 	</script>
 </html>
