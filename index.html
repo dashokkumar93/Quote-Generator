@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -9,18 +10,10 @@
 <body>
 </body>
 <script type="text/javascript">
-var responseQuote;
-function parseQuote(resolvee)
-{
-  responseQuote=resolvee;
-}
-$(document).ready(function()
-{
-main_Function.init(responseQuote);
+$(document).ready(function(){
+$.getJSON("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20json%20where%20url%3D'http%3A%2F%2Fapi.forismatic.com%2Fapi%2F1.0%2F%3Fmethod%3DgetQuote%26format%3Djson%26lang%3Den'&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys", function(data) {
+ main_Function.init(data);
+}); 
 });
-
-
 	</script>
-  <script type="text/javascript" src="http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=parseQuote"></script>
-
 </html>
